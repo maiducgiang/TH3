@@ -5,18 +5,18 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.viewmodel.CreationExtras;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.th3_3.R;
 import com.example.th3_3.UdateDeleteActivity;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 import DAL.SQLiteHelper;
@@ -54,8 +54,10 @@ public class FragmentHistory extends Fragment implements RecycleViewAdapter.Item
         recyclerView = view.findViewById(R.id.recycleView);
         adapter = new RecycleViewAdapter();
         db = new SQLiteHelper(getContext());
-        Item item = new Item(1, "Mua quan bo", "Mua sam", "500", "22/2222");
-        db.addItem(item);
+        Date d = new Date();
+        SimpleDateFormat f = new SimpleDateFormat("dd/MM/yyyy");
+//        Item item = new Item(1, "Mua quan bo", "Mua sam", "500", f.format(d));
+//        db.addItem(item);
         List<Item> list = db.getAll();
 
         adapter.setList(list);

@@ -59,7 +59,25 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         }
         return list;
     }
+    public List<Item> getByDate( String date){
+        List<Item> list = new ArrayList<>();
+        String whereClause = "date like?";
+        String[] whereArgs ={date};
 
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+
+        Cursor rs = sqLiteDatabase.query("items",null,whereClause,whereArgs,null,null,null);
+        while ((rs!=null) && rs.moveToNext()){
+            int id = rs.getInt(0);
+            String title = rs.getString(1);
+            String category = rs.getString(2);
+            String price = rs.getString(3);
+            String date1 = rs.getString(4);
+            list.add(new Item(id,title,category,price,date1));
+
+        }
+        return list;
+    }
     public long addItem(Item i){
         ContentValues values = new ContentValues();
         values.put("title", i.getTitle());

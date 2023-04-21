@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".AddActiviti">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+    <TextView
+        android:text="Them chi tieu"
+        android:textSize="22sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></TextView>
+
+</LinearLayout>
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_marginLeft="10dp"
+
+       >
+       <EditText
+           android:id="@+id/tvTitle"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="enter title"
+           />
+       <Spinner
+           android:id="@+id/spinnerCategory"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+       <EditText
+           android:id="@+id/tvPrice"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="enter price"
+           />
+       <EditText
+           android:id="@+id/tvDate"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+
+           android:hint="select Date"
+           />
+
+   </LinearLayout>
+    <LinearLayout
+        android:weightSum="2"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+
+            android:id="@+id/btUpdate"
+            android:layout_weight="1"
+            android:text="update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin= "5sp"
+            /><Button
+
+        android:id="@+id/btCancel"
+        android:layout_weight="1"
+        android:layout_margin = "5sp"
+        android:text="cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        />
+
+    </LinearLayout>
+</LinearLayout>
