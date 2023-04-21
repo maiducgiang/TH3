@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+   <androidx.appcompat.widget.SearchView
+       android:id="@+id/search"
+       android:layout_marginTop="10dp"
+       app:iconifiedByDefault="false"
+       app:queryHint="Nhap mon chi tieu"
+       android:textColor="@color/black"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       />
+    <EditText
+        android:id="@+id/edit_text_from"
+        android:textSize="12dp"
+        android:hint="Chon tu ngay"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:id="@+id/edit_text_to"
+        android:textSize="12dp"
+        android:hint="Chon den ngay"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+            <Button
+                android:id="@+id/bt_search"
+                android:layout_weight ="1"
+                android:text="Search"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tvTong"
+        android:text="Tong"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:layout_marginLeft="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_marginTop="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
