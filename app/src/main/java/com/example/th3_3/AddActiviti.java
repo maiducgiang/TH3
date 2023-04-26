@@ -51,6 +51,8 @@ public class AddActiviti extends AppCompatActivity implements View.OnClickListen
         eDate = findViewById(R.id.tvDate);
         btUpdate = findViewById(R.id.btUpdate);
         btCancel = findViewById(R.id.btCancel);
+//        btCancel.setOnClickListener(this);
+//        btUpdate.setOnClickListener(this);
         List<String> listCategory = new ArrayList<>();
         listCategory.add("an com");
         listCategory.add("quan ao 1");
