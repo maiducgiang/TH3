@@ -73,6 +73,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
             category = view.findViewById(R.id.tvCategory);
             date = view.findViewById(R.id.tvDate);
             price = view.findViewById(R.id.tvPrice);
+            view.setOnClickListener(this);
         }
 
         @Override

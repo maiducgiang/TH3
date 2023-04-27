@@ -111,6 +111,9 @@ public class UdateDeleteActivity extends AppCompatActivity implements OnClickLis
         }
         if(view == btRemove){
             int id = item.getId();
+
+            db.delete(item.getId());
+            finish();
             AlertDialog.Builder buider = new AlertDialog.Builder(view.getContext());
             buider.setTitle("thong bao xoa");
             buider.setMessage("Ban co chac chan muon xoa"+item.getTitle()+"khong");
@@ -131,13 +134,14 @@ public class UdateDeleteActivity extends AppCompatActivity implements OnClickLis
             });
         }
         if (view == btUpdate) {
+            int id = item.getId();
             String t = eTitle.getText().toString();
             String p = ePrice.getText().toString();
             String cate = sp.getSelectedItem().toString();
 
             String d = eDate.getText().toString();
             if (!t.isEmpty() && p.matches("\\d+")) {
-                Item i = new Item(t, cate, p, d);
+                Item i = new Item(id, t, cate, p, d);
 //                SQLiteHelper db = new SQLiteHelper(this);
                 db.update(i);
                 finish();
